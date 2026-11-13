@@ -12,15 +12,7 @@ const biomas = [
 export function MatoGrosso() {
   return (
     <section id="mato-grosso" aria-labelledby="mt-titulo" className="relative overflow-hidden bg-floresta-900 text-white">
-      <CurvasDeNivel
-        className="pointer-events-none absolute inset-0 h-full w-full text-floresta-300/[0.12]"
-        largura={1400}
-        altura={700}
-        centros={[
-          { x: 200, y: 560, raioInicial: 30, passo: 30, niveis: 14, fase: 2.4 },
-          { x: 1250, y: 120, raioInicial: 20, passo: 28, niveis: 10, fase: 0.9 },
-        ]}
-      />
+      <CurvasDeNivel composicao="mato-grosso" />
       <div className="relative mx-auto grid max-w-7xl gap-14 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-8 lg:py-28">
         <div className="lg:col-span-6">
           <Rotulo className="text-sol-300">Território inicial</Rotulo>

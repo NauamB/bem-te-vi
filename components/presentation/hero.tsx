@@ -5,12 +5,7 @@ import { CurvasDeNivel } from "./curvas-de-nivel";
 export function Hero() {
   return (
     <section aria-labelledby="hero-titulo" className="relative overflow-hidden border-b border-floresta-900/10">
-      <CurvasDeNivel
-        className="pointer-events-none absolute inset-0 h-full w-full text-floresta-800/[0.07]"
-        largura={1400}
-        altura={800}
-        centros={[{ x: 1180, y: 330, raioInicial: 40, passo: 34, niveis: 16, fase: 0.6 }]}
-      />
+      <CurvasDeNivel composicao="hero" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-20 lg:grid-cols-12 lg:items-center lg:gap-8 lg:px-8 lg:pb-28 lg:pt-24">
         <div className="lg:col-span-7">
           <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-floresta-700">{site.assinatura}</p>
@@ -32,15 +27,7 @@ export function Hero() {
 
         <figure className="lg:col-span-5">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-floresta-900/15 bg-floresta-950 sm:aspect-[5/4]">
-            <CurvasDeNivel
-              className="absolute inset-0 h-full w-full text-floresta-300/35"
-              largura={500}
-              altura={400}
-              centros={[
-                { x: 150, y: 120, raioInicial: 10, passo: 15, niveis: 9, fase: 0.2 },
-                { x: 380, y: 300, raioInicial: 14, passo: 17, niveis: 8, fase: 1.9 },
-              ]}
-            />
+            <CurvasDeNivel composicao="painel" />
             <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,.06)_1px,transparent_1px)] bg-[size:25%_25%]" />
             <div className="absolute left-4 top-4 flex flex-wrap gap-2 font-mono text-[0.65rem] uppercase tracking-[0.14em]">
               <span className="rounded-full bg-floresta-500/90 px-2.5 py-1 text-white">Flora</span>

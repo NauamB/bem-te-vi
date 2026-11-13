@@ -10,7 +10,9 @@ Versão 0.1.0, 13/11/2026, Fase 10C. A seção 1 descreve o que **existe**. As d
 | Estilo | Tailwind CSS 4.3, tokens em `app/globals.css` (`@theme`) | Implementado |
 | Fontes tipográficas | `next/font/google` (Fraunces, Inter, IBM Plex Mono; SIL OFL), embutidas no build | Implementado |
 | Renderização | `cacheComponents: true` e `partialPrefetching: true`, padrões do create-next-app 16.4. As 3 rotas são pré-renderizadas como estáticas | Implementado |
-| Cabeçalhos de segurança | `next.config.ts`: `nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy`, `Permissions-Policy`, COOP; `poweredByHeader: false` | Implementado |
+| Cabeçalhos de segurança | `next.config.ts`: `nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy`, `Permissions-Policy`, COOP; `poweredByHeader: false`; `X-Robots-Tag: noindex, nofollow` em `/acesso` (Fase 10D.3). CSP: proposta em `docs/RELATORIO_FASE_10D_3.md`, ainda não ativada | Implementado |
+| SEO técnico (Fase 10D.3) | `app/robots.ts` e `app/sitemap.ts` (só `/` e `/explorar`), `metadataBase` e Open Graph básico; 404 com título próprio | Implementado |
+| Decoração (Fase 10D.3) | Curvas de nível como SVG estático em `public/decoracao/`, gerado por `scripts/gerar-decoracao.mjs` e aplicado como fundo CSS (fora do HTML e do payload do React) | Implementado |
 | Supabase | `lib/supabase/config.ts` lê só a configuração pública e devolve `null` se ausente; **nenhuma biblioteca instalada** | Preparado |
 | Banco | — | Não existe |
 | Autenticação | — | Não existe (sem simulação) |

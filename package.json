@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "decoracao:gerar": "node scripts/gerar-decoracao.mjs",
+    "decoracao:verificar": "node scripts/gerar-decoracao.mjs --verificar"
   },
   "dependencies": {
     "next": "16.4.6",

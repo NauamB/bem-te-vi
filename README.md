@@ -26,6 +26,8 @@ npm run dev      # desenvolvimento em http://localhost:3000
 npm run lint     # ESLint
 npm run build    # build de produção
 npm run start    # serve o build
+npm run decoracao:gerar      # regenera as curvas de nível decorativas (public/decoracao/)
+npm run decoracao:verificar  # confere se os SVGs decorativos estão atualizados (código 1 se não)
 ```
 
 Variáveis de ambiente: ver `.env.example` (nenhuma é obrigatória nesta fase; nunca versione `.env.local`).
@@ -46,6 +48,9 @@ lib/supabase/         configuração pública e organização prevista dos clien
 types/                tipos de domínio (natureza da informação)
 supabase/migrations/  reservado; sem migrações nesta fase
 public/brand/         marca (SVG próprio)
+public/decoracao/     curvas de nível decorativas (SVG gerado por scripts/gerar-decoracao.mjs)
+scripts/              utilitários de desenvolvimento (sem dependências)
+app/robots.ts, app/sitemap.ts   robots.txt e sitemap.xml (só páginas públicas existentes)
 docs/                 produto/, arquitetura/, governanca/, dados/, RELATORIO_FASE_10C.md
 ```
 

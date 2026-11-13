@@ -9,9 +9,11 @@ const texto = Inter({ subsets: ["latin"], variable: "--font-texto", display: "sw
 const dados = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-dados", display: "swap" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: { default: site.titulo, template: `%s · ${site.nome}` },
   description: site.descricao,
   applicationName: site.nome,
+  openGraph: { type: "website", locale: "pt_BR", siteName: site.nome, title: site.titulo, description: site.descricao },
 };
 
 export const viewport: Viewport = {

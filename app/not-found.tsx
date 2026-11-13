@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+// Metadados próprios da 404 (suportados no app/not-found.tsx raiz). A resposta continua com status HTTP 404,
+// e o Next.js já injeta <meta name="robots" content="noindex"> nela; por isso não há robots aqui (evita duplicar).
+export const metadata: Metadata = {
+  title: "Página não encontrada",
+  description: "O endereço solicitado não corresponde a nenhuma página do Bem-te-vi.",
+};
 
 export default function NaoEncontrado() {
   return (

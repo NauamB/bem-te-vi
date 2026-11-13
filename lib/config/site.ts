@@ -6,6 +6,8 @@ export const site = {
   assinatura: "Mato Grosso · Flora · Fauna · Território",
   descricao:
     "Uma plataforma de inteligência da biodiversidade que conecta informações sobre espécies, ocorrências e territórios para ampliar o conhecimento sobre a natureza.",
+  // Domínio oficial de produção (Vercel). Usado em metadados absolutos, robots.txt e sitemap.xml.
+  url: "https://bem-te-vi-zeta.vercel.app",
   versao: "0.1.0",
   fase: "Fundação (Fase 10C)",
   aviso:
@@ -27,3 +29,6 @@ export const rotas = {
   acessoInterno: "/acesso",
   plataforma: "/#plataforma",
 } as const;
+
+// Únicas páginas públicas e indexáveis que existem hoje. /acesso fica de fora (noindex). Não incluir rotas futuras.
+export const rotasIndexaveis = [rotas.inicio, rotas.explorar] as const;

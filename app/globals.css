@@ -62,6 +62,13 @@ body {
   border-radius: 2px;
 }
 
+/* Contêineres que recebem foco programático (destino do menu ou do link "Ir para o conteúdo") não exibem
+   contorno: o foco serve para leitores de tela e para o próximo Tab, não é um controle interativo. */
+main[tabindex="-1"]:focus,
+section[tabindex="-1"]:focus {
+  outline: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

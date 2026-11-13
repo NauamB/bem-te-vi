@@ -24,7 +24,11 @@ const nextConfig: NextConfig = {
     },
   },
   headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      // O acesso interno não deve ser indexado (reforça a meta robots da página; vale também para robôs que ignoram o HTML).
+      { source: "/acesso", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] },
+    ];
   },
 };
 

@@ -1,37 +1,21 @@
-// Curvas de nível decorativas, geradas de forma determinística (mesmo desenho a cada build).
-// É uma composição gráfica: não representa relevo, território ou dado real.
+// Curvas de nível decorativas, servidas como SVG estático (public/decoracao/, gerado por scripts/gerar-decoracao.mjs).
+// É uma composição gráfica: não representa relevo, território ou dado real. Como fundo CSS, fica fora do HTML,
+// do payload do React e da árvore de acessibilidade; o aria-hidden reforça que é puramente decorativa.
 
-type Centro = { x: number; y: number; raioInicial: number; passo: number; niveis: number; fase: number };
+const arquivos = {
+  hero: "/decoracao/curvas-hero.svg",
+  painel: "/decoracao/curvas-painel.svg",
+  "mato-grosso": "/decoracao/curvas-mato-grosso.svg",
+} as const;
 
-type CurvasDeNivelProps = {
-  className?: string;
-  largura?: number;
-  altura?: number;
-  centros: Centro[];
-};
+type CurvasDeNivelProps = { composicao: keyof typeof arquivos; className?: string };
 
-function curva(c: Centro, nivel: number): string {
-  const r = c.raioInicial + nivel * c.passo;
-  const pontos = 96;
-  const coords: string[] = [];
-  for (let i = 0; i <= pontos; i++) {
-    const t = (i / pontos) * Math.PI * 2;
-    const ondulacao = 1 + 0.11 * Math.sin(3 * t + c.fase + nivel * 0.35) + 0.06 * Math.sin(5 * t - nivel * 0.5) + 0.03 * Math.cos(7 * t + c.fase);
-    const x = c.x + Math.cos(t) * r * ondulacao * 1.25;
-    const y = c.y + Math.sin(t) * r * ondulacao;
-    coords.push(`${i === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`);
-  }
-  return `${coords.join("")}Z`;
-}
-
-export function CurvasDeNivel({ className, largura = 800, altura = 600, centros }: CurvasDeNivelProps) {
+export function CurvasDeNivel({ composicao, className = "" }: CurvasDeNivelProps) {
   return (
-    <svg viewBox={`0 0 ${largura} ${altura}`} className={className} aria-hidden="true" preserveAspectRatio="xMidYMid slice" fill="none">
-      {centros.map((c, ci) =>
-        Array.from({ length: c.niveis }, (_, n) => (
-          <path key={`${ci}-${n}`} d={curva(c, n)} stroke="currentColor" strokeWidth={n % 4 === 3 ? 1.4 : 0.8} vectorEffect="non-scaling-stroke" />
-        )),
-      )}
-    </svg>
+    <div
+      aria-hidden="true"
+      className={`pointer-events-none absolute inset-0 bg-no-repeat [background-size:100%_100%] ${className}`}
+      style={{ backgroundImage: `url(${arquivos[composicao]})` }}
+    />
   );
 }
