@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/*
+ * Identidade Bem-te-vi — tokens de cor e tipografia.
+ * Verde-floresta como cor institucional; ocre do Cerrado, azul-esverdeado do Pantanal e
+ * amarelo-sol como acentos de uso restrito; neutros em tons de areia e grafite.
+ */
+@theme {
+  --color-floresta-50: #eef5f0;
+  --color-floresta-100: #d6e7dc;
+  --color-floresta-300: #8fbd9f;
+  --color-floresta-500: #3d8058;
+  --color-floresta-600: #2f6b4a;
+  --color-floresta-700: #24573c;
+  --color-floresta-800: #1b4430;
+  --color-floresta-900: #133323;
+  --color-floresta-950: #0b2117;
+
+  --color-cerrado-400: #c9894a;
+  --color-cerrado-600: #9a5f2a;
+  --color-pantanal-400: #5aa3a6;
+  --color-pantanal-600: #2f6f73;
+  --color-sol-300: #f0cf6e;
+  --color-sol-400: #e6b83d;
+
+  --color-areia-50: #fbf9f4;
+  --color-areia-100: #f4efe4;
+  --color-areia-200: #e8e0cf;
+  --color-pedra-500: #6b7068;
+  --color-pedra-700: #3f443e;
+  --color-grafite-900: #1c201d;
+
+  --font-sans: var(--font-texto), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-titulo), ui-serif, Georgia, serif;
+  --font-mono: var(--font-dados), ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-areia-50);
+  color: var(--color-grafite-900);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+/* Âncoras não ficam escondidas sob o cabeçalho fixo. */
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-sol-400);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* Menu móvel (<details>) sem o triângulo padrão. */
+summary::-webkit-details-marker {
+  display: none;
+}
+summary {
+  list-style: none;
+}

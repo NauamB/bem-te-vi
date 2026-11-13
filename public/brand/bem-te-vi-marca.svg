@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Marca do Bem-te-vi">
+  <title>Bem-te-vi — marca</title>
+  <defs><clipPath id="lente"><circle cx="24" cy="24" r="21"/></clipPath></defs>
+  <g clip-path="url(#lente)">
+    <path d="M0 0H48V15C36 22 26 11 13 17C8 19.5 4 20 0 19Z" fill="#2f6b4a"/>
+    <path d="M0 19C4 20 8 19.5 13 17C26 11 36 22 48 15V29C38 35 27 26 16 31C10 33.5 5 33 0 32Z" fill="#c9894a"/>
+    <path d="M0 32C5 33 10 33.5 16 31C27 26 38 35 48 29V48H0Z" fill="#2f6f73"/>
+    <path d="M0 25.5C6 26.5 11 25 17 23C27 19.5 36 27 48 22" fill="none" stroke="#fbf9f4" stroke-opacity=".55" stroke-width="1"/>
+    <path d="M0 39C8 39.5 14 38 21 36.5C30 34.5 38 40 48 36" fill="none" stroke="#fbf9f4" stroke-opacity=".45" stroke-width="1"/>
+    <path d="M0 10.5C9 12 16 8 25 8.5C33 9 40 12 48 8" fill="none" stroke="#fbf9f4" stroke-opacity=".4" stroke-width="1"/>
+  </g>
+  <circle cx="24" cy="24" r="21" fill="none" stroke="#0b2117" stroke-width="2"/>
+  <circle cx="31.5" cy="19.5" r="3" fill="#e6b83d" stroke="#0b2117" stroke-width="1.25"/>
+</svg>
