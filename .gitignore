@@ -12,6 +12,11 @@
 
 # testing
 /coverage
+# resultados temporários do Playwright (configuração e testes continuam versionados)
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
 
 # next.js
 /.next/

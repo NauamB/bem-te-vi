@@ -18,10 +18,10 @@ Plataforma de inteligência da biodiversidade que conectará informações sobre
 
 ## Requisitos e comandos
 
-Node.js ≥ 20.9 (testado com 26.13.0) e npm.
+Node.js 26.x (definido em `.nvmrc` e em `engines` do `package.json`; testado com 26.13.0) e npm.
 
 ```bash
-npm install
+npm ci           # instala exatamente as versões do package-lock.json
 npm run dev      # desenvolvimento em http://localhost:3000
 npm run lint     # ESLint
 npm run build    # build de produção
@@ -29,6 +29,22 @@ npm run start    # serve o build
 npm run decoracao:gerar      # regenera as curvas de nível decorativas (public/decoracao/)
 npm run decoracao:verificar  # confere se os SVGs decorativos estão atualizados (código 1 se não)
 ```
+
+### Testes de ponta a ponta (Playwright)
+
+Os testes rodam contra o servidor de produção local (`next start` em `127.0.0.1:3200`), nunca contra a implantação pública.
+
+```bash
+npm run test:e2e:instalar  # instala o Chromium do Playwright (uma vez por máquina)
+npm run test:e2e           # faz o build de produção e executa a suíte (tests/e2e/)
+npm run test:e2e:report    # abre o relatório HTML da última execução (playwright-report/)
+```
+
+Resultados e relatórios (`test-results/`, `playwright-report/`) não são versionados.
+
+### Integração contínua
+
+`.github/workflows/ci.yml` executa, em cada push e pull request para `main`: `npm ci`, lint, verificação das decorações, build e a suíte de ponta a ponta. Não faz deploy; a publicação continua pela integração Git/Vercel.
 
 Variáveis de ambiente: ver `.env.example` (nenhuma é obrigatória nesta fase; nunca versione `.env.local`).
 
@@ -50,6 +66,8 @@ supabase/migrations/  reservado; sem migrações nesta fase
 public/brand/         marca (SVG próprio)
 public/decoracao/     curvas de nível decorativas (SVG gerado por scripts/gerar-decoracao.mjs)
 scripts/              utilitários de desenvolvimento (sem dependências)
+tests/                e2e/ (testes Playwright) e support/ (fixtures e larguras de tela)
+.github/workflows/    integração contínua (ci.yml)
 app/robots.ts, app/sitemap.ts   robots.txt e sitemap.xml (só páginas públicas existentes)
 docs/                 produto/, arquitetura/, governanca/, dados/, RELATORIO_FASE_10C.md
 ```

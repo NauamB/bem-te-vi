@@ -1,0 +1,67 @@
+# Integração contínua do Bem-te-vi: lint, verificação das decorações, build e testes de ponta a ponta.
+# Somente leitura do repositório, sem segredos, sem deploy e sem acesso à produção: os testes rodam contra
+# o servidor de produção LOCAL do runner (next start em 127.0.0.1). O deploy continua com a integração Git/Vercel.
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qualidade:
+    name: Lint, build e testes
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CI: "true"
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      # actions/checkout v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      # actions/setup-node v7.1.0 — Node da linha definida em .nvmrc (26)
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Verificar decorações (SVG gerados)
+        run: npm run decoracao:verificar
+
+      - name: Build de produção
+        run: npm run build
+
+      - name: Instalar Chromium do Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Testes de ponta a ponta
+        run: npx playwright test
+
+      # actions/upload-artifact v7.0.2 — só quando algo falha; retenção curta (repositório público)
+      - name: Publicar relatório e rastros da falha
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: playwright-falhas-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+          if-no-files-found: ignore
