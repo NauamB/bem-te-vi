@@ -45,3 +45,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# dados baixados e banco local (originais ficam fora do Git; manifestos em dados/referencias/ são versionados)
+/dados/originais/
+/dados/banco-local/
+
+# certificado raiz do Supabase usado pelos scripts locais (público, mas mantido fora do Git; o site usa a cópia
+# embutida em lib/banco/certificado-supabase.ts)
+/prod-ca-2021.crt

@@ -51,6 +51,13 @@ Toda informação pertence a uma única categoria, definida em `types/informacao
 
 As fontes vêm da avaliação documental de 13/11/2026, feita fora deste repositório. **Nenhuma foi integrada.** Contagens e limites precisam ser reconfirmados.
 
+> **16/11/2026:** o [ADR-0001](../arquitetura/ADR-0001-arquitetura-do-piloto.md) (revisão 2, aguardando aprovação final) define, para o piloto:
+> - **Flora e Funga do Brasil** como referência taxonômica (licença CC BY 4.0 confirmada no registro do GBIF: DOI `10.15468/1mtkaw`, versão 393.433);
+> - **GBIF** como fonte de ocorrências, com um lote 1 controlado;
+> - **IBGE** como referência territorial;
+> - registros CC BY-NC só depois de **revisão humana de cada conjunto de dados**, com condições de uso, atribuição e licença registradas;
+> - **generalização conservadora de todas as coordenadas públicas** até a validação da política de sensíveis.
+
 | Fonte | Uso previsto | Observação |
 |---|---|---|
 | Flora e Funga do Brasil (JBRJ, IPT) | Lista taxonômica de flora, distribuição por UF | CC BY 4.0, segundo a página do recurso |

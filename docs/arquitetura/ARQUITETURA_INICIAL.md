@@ -40,6 +40,13 @@ Os grupos de rota `(publico)` e `(interno)` separam o observatório e o ambiente
 
 ## 2. Arquitetura prevista
 
+> **16/11/2026:** para o piloto demonstrativo e não comercial, esta seção é detalhada e simplificada pelo [ADR-0001](ADR-0001-arquitetura-do-piloto.md), ainda em proposta. Principais mudanças:
+> - Vercel Hobby e Supabase Free;
+> - ingestão só por workflow manual;
+> - sem autenticação no piloto;
+> - Flora e Funga do Brasil como referência taxonômica;
+> - lote inicial controlado.
+
 ```
 Navegador ──► Next.js na Vercel (região gru1, a confirmar)
                ├─ (publico): leitura com chave publicável + RLS do papel anon

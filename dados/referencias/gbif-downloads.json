@@ -1,0 +1,34 @@
+{
+  "downloads": [
+    {
+      "lote": "flora",
+      "chave": "0010860-261110092616502",
+      "solicitado_em": "2026-11-16T20:06:48.505Z",
+      "doi": "10.15468/dl.5wwkxs",
+      "citacao": "GBIF.org (2026-11-16) GBIF Occurrence Download https://doi.org/10.15468/dl.5wwkxs",
+      "licenca": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "registros": 85843,
+      "conjuntos": 176,
+      "link": "https://api.gbif.org/v1/occurrence/download/request/0010860-261110092616502.zip",
+      "tamanho_bytes": 34540847,
+      "sha256": "637a8292b56d28fbe15db065a829bfbe2d061063c951cacd214b5466b68408ba",
+      "caminho_local": "dados/originais/gbif/0010860-261110092616502.zip",
+      "baixado_em": "2026-11-16T20:54:30.113Z"
+    },
+    {
+      "lote": "fauna",
+      "chave": "0010861-261110092616502",
+      "solicitado_em": "2026-11-16T20:06:48.516Z",
+      "doi": "10.15468/dl.msfnuh",
+      "citacao": "GBIF.org (2026-11-16) GBIF Occurrence Download https://doi.org/10.15468/dl.msfnuh",
+      "licenca": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "registros": 45778,
+      "conjuntos": 131,
+      "link": "https://api.gbif.org/v1/occurrence/download/request/0010861-261110092616502.zip",
+      "tamanho_bytes": 7292581,
+      "sha256": "4f58628198a9ede7b5fcb34468c5de27dd512a5f71476d35b6ec65548b450cf7",
+      "caminho_local": "dados/originais/gbif/0010861-261110092616502.zip",
+      "baixado_em": "2026-11-16T20:16:15.611Z"
+    }
+  ]
+}

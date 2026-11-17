@@ -1,4 +1,4 @@
-# Integração contínua do Bem-te-vi: lint, verificação das decorações, build e testes de ponta a ponta.
+# Integração contínua do Bem-te-vi: lint, testes do banco, verificação das decorações, build e testes de ponta a ponta.
 # Somente leitura do repositório, sem segredos, sem deploy e sem acesso à produção: os testes rodam contra
 # o servidor de produção LOCAL do runner (next start em 127.0.0.1). O deploy continua com a integração Git/Vercel.
 name: CI
@@ -41,6 +41,19 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
+      # Malha municipal oficial do IBGE (pública); a carga falha se o SHA-256 divergir do manifesto versionado.
+      - name: Baixar malha municipal do IBGE (confere SHA-256)
+        run: npm run territorio:baixar
+
+      # Flora e Funga do Brasil (CC BY 4.0, DOI 10.15468/1mtkaw); a carga falha se o SHA-256 divergir do manifesto.
+      - name: Baixar Flora e Funga do Brasil (confere SHA-256)
+        run: npm run taxonomia:baixar
+
+      # Banco em memória (PGlite + PostGIS): dados sintéticos nos testes de regras e a malha oficial nos de território.
+      # Sem segredos e sem Supabase.
+      - name: Testes do banco (migrações, permissões, proteção de coordenadas e território)
+        run: npm run test:banco
 
       - name: Verificar decorações (SVG gerados)
         run: npm run decoracao:verificar

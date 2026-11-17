@@ -1,0 +1,30 @@
+{
+  "descricao": "IBGE — Biomas e Sistema Costeiro-Marinho do Brasil, compatível com a escala 1:250.000 (edição 2025)",
+  "fonte": {
+    "nome": "IBGE — Biomas e Sistema Costeiro-Marinho do Brasil (1:250.000)",
+    "url": "https://www.ibge.gov.br/geociencias/informacoes-ambientais/estudos-ambientais/15842-biomas.html"
+  },
+  "edicao": "2025 (arquivo lml_bioma_e250k_v20250911_A, de 11/09/2025)",
+  "escala": "compatível com 1:250.000",
+  "sistema_de_referencia": "a confirmar no .prj ao preparar a importação",
+  "obtido_em": "2026-11-16T18:22:53Z",
+  "condicoes_de_uso": {
+    "situacao": "pendente — termos NÃO localizados",
+    "resumo": "O pacote de 2025 não contém LEIA-ME nem declaração de licença. O PDF de metadados do diretório é de 2006 (escala 1:5.000.000) e não se aplica. A busca não localizou termos de uso específicos desta edição. A camada NÃO deve ser publicada até a verificação dos termos (ex.: notas metodológicas n. 01/2025 dos biomas, na Biblioteca do IBGE).",
+    "evidencias": [
+      "Conteúdo do ZIP: Bioma_n1_2025.qml, Cores_Biomas_Padrao.lyr, lml_bioma_e250k_v20250911_A.(cpg|dbf|prj|shp|shx); sem LEIA-ME.",
+      "Metadados_Biomas_do_Brasil.pdf (SHA-256 ab9e68a637294c06fca56d4986ab01560035f37e826cd3182763ef13ac562fda): descreve o Mapa de Biomas de 2006, escala 1:5.000.000."
+    ]
+  },
+  "arquivos": [
+    {
+      "papel": "biomas",
+      "nome": "2025_Biomas-e-Sistema-Costeiro-Marinho-do-Brasil-1-250000_shp.zip",
+      "url": "https://geoftp.ibge.gov.br/informacoes_ambientais/estudos_ambientais/biomas/vetores/2025_Biomas-e-Sistema-Costeiro-Marinho-do-Brasil-1-250000_shp.zip",
+      "caminho_local": "dados/originais/ibge/biomas-2025/2025_Biomas-e-Sistema-Costeiro-Marinho-do-Brasil-1-250000_shp.zip",
+      "tamanho_bytes": 13685677,
+      "sha256": "247b15c427070805044ebe02012f15552850d535fbfecaddb359875cdda1ea8f",
+      "last_modified_servidor": "Tue, 18 Nov 2025 13:00:07 GMT"
+    }
+  ]
+}

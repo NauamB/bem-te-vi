@@ -1,0 +1,31 @@
+{
+  "descricao": "Flora e Funga do Brasil — Lista Oficial (Darwin Core Archive do IPT do JBRJ)",
+  "fonte": {
+    "nome": "Flora e Funga do Brasil — Lista Oficial (Instituto de Pesquisas Jardim Botânico do Rio de Janeiro)",
+    "url": "https://ipt.jbrj.gov.br/jbrj/resource?r=lista_especies_flora_brasil"
+  },
+  "papel": "taxonomia",
+  "versao": "v393.433",
+  "doi": "10.15468/1mtkaw",
+  "licenca": "CC-BY-4.0",
+  "licenca_evidencia": "eml.xml do pacote: \"This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License\" (http://creativecommons.org/licenses/by/4.0/legalcode); registro do GBIF do mesmo conjunto (DOI 10.15468/1mtkaw) com licença CC BY 4.0.",
+  "citacao": "Flora e Funga do Brasil (Constantly updated): Flora e Funga do Brasil project - Projeto Flora e Funga do Brasil. Instituto de Pesquisas Jardim Botânico do Rio de Janeiro. Dataset/Checklist. doi:10.15468/1mtkaw",
+  "obtido_em": "2026-11-16T18:22:12Z",
+  "recorte": {
+    "nomes": "todos os nomes do núcleo (Taxon)",
+    "nomes_populares": "todos",
+    "perfil": "somente espécies aceitas (rank espécie) com algum conteúdo",
+    "distribuicao": "somente BR-MT"
+  },
+  "arquivos": [
+    {
+      "papel": "dwca",
+      "nome": "dwca-lista_especies_flora_brasil-v393.433.zip",
+      "url": "https://ipt.jbrj.gov.br/jbrj/archive.do?r=lista_especies_flora_brasil&v=393.433",
+      "caminho_local": "dados/originais/flora-funga/lista_especies_flora_brasil.zip",
+      "tamanho_bytes": 20420659,
+      "sha256": "bb31878e0a1df9eed2a25a6ced5ea2bf22f616a12befd600a6352d3a5deedc57",
+      "last_modified_servidor": "Sun, 01 Nov 2026 15:02:40 GMT"
+    }
+  ]
+}

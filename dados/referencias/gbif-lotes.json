@@ -1,0 +1,63 @@
+{
+  "descricao": "Lotes de ocorrências do GBIF para o piloto (Mato Grosso). Cada lote vira um download oficial com DOI, solicitado pela conta do proprietário.",
+  "fonte": { "nome": "GBIF — Global Biodiversity Information Facility", "url": "https://www.gbif.org" },
+  "taxonomia_das_ocorrencias": {
+    "nome": "GBIF Backbone Taxonomy",
+    "doi": "10.15468/39omei",
+    "licenca": "CC-BY-4.0",
+    "versao": "2023-08-28",
+    "citacao": "GBIF Secretariat (2023). GBIF Backbone Taxonomy. Checklist dataset https://doi.org/10.15468/39omei",
+    "uso": "Referência PROVISÓRIA para fauna e demais grupos que não são cobertos pela Flora e Funga do Brasil. Não é o catálogo taxonômico oficial brasileiro."
+  },
+  "lotes": {
+    "flora": {
+      "descricao": "Plantas de MT — exemplares de herbário coletados a partir de 2000",
+      "predicado": {
+        "type": "and",
+        "predicates": [
+          { "type": "equals", "key": "GADM_GID", "value": "BRA.12_1" },
+          { "type": "equals", "key": "KINGDOM_KEY", "value": "6" },
+          { "type": "equals", "key": "BASIS_OF_RECORD", "value": "PRESERVED_SPECIMEN" },
+          { "type": "greaterThanOrEquals", "key": "YEAR", "value": "2000" },
+          { "type": "equals", "key": "HAS_COORDINATE", "value": "true" },
+          { "type": "equals", "key": "HAS_GEOSPATIAL_ISSUE", "value": "false" },
+          { "type": "equals", "key": "OCCURRENCE_STATUS", "value": "PRESENT" }
+        ]
+      },
+      "filtros_busca": "gadmGid=BRA.12_1&kingdomKey=6&basisOfRecord=PRESERVED_SPECIMEN&year=2000,2100&hasCoordinate=true&hasGeospatialIssue=false&occurrenceStatus=PRESENT",
+      "referencia_taxonomica": "flora-funga-brasil",
+      "avaliacao_previa": {
+        "medido_em": "2026-11-16T17:18Z",
+        "ocorrencias": 85843,
+        "por_licenca": { "CC-BY-4.0": 83732, "CC0-1.0": 1734, "CC-BY-NC-4.0": 377 },
+        "conjuntos": 176,
+        "conjuntos_cc_by_nc": 6
+      }
+    },
+    "fauna": {
+      "descricao": "Animais de MT — exemplares de coleções zoológicas coletados a partir de 2000",
+      "predicado": {
+        "type": "and",
+        "predicates": [
+          { "type": "equals", "key": "GADM_GID", "value": "BRA.12_1" },
+          { "type": "equals", "key": "KINGDOM_KEY", "value": "1" },
+          { "type": "equals", "key": "BASIS_OF_RECORD", "value": "PRESERVED_SPECIMEN" },
+          { "type": "greaterThanOrEquals", "key": "YEAR", "value": "2000" },
+          { "type": "equals", "key": "HAS_COORDINATE", "value": "true" },
+          { "type": "equals", "key": "HAS_GEOSPATIAL_ISSUE", "value": "false" },
+          { "type": "equals", "key": "OCCURRENCE_STATUS", "value": "PRESENT" }
+        ]
+      },
+      "filtros_busca": "gadmGid=BRA.12_1&kingdomKey=1&basisOfRecord=PRESERVED_SPECIMEN&year=2000,2100&hasCoordinate=true&hasGeospatialIssue=false&occurrenceStatus=PRESENT",
+      "referencia_taxonomica": "gbif-taxonomia",
+      "avaliacao_previa": {
+        "medido_em": "2026-11-16T18:24Z",
+        "ocorrencias": 45802,
+        "por_licenca": { "CC-BY-4.0": 24624, "CC-BY-NC-4.0": 20280, "CC0-1.0": 898 },
+        "conjuntos": 131,
+        "conjuntos_cc_by_nc": 53
+      }
+    }
+  },
+  "justificativa": "Exemplares tombados em coleções são verificáveis; coletas a partir de 2000 têm coordenadas em geral obtidas por GPS; os dois lotes somam ~132 mil ocorrências, compatível com o limite de 500 MB do Supabase Free. Observações sem exemplar (ex.: eBird, ~1,65 milhão) ficam fora do piloto."
+}

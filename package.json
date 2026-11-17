@@ -9,19 +9,31 @@
     "lint": "eslint",
     "decoracao:gerar": "node scripts/gerar-decoracao.mjs",
     "decoracao:verificar": "node scripts/gerar-decoracao.mjs --verificar",
+    "test:banco": "node --test \"tests/banco/*.test.mjs\"",
     "test:e2e": "next build && playwright test",
     "test:e2e:report": "playwright show-report",
-    "test:e2e:instalar": "playwright install chromium"
+    "test:e2e:instalar": "playwright install chromium",
+    "banco:local": "node scripts/banco/local.mjs",
+    "territorio:baixar": "node --use-system-ca scripts/ingestao/ibge-malha.mjs baixar",
+    "territorio:carregar": "node scripts/ingestao/ibge-malha.mjs carregar",
+    "taxonomia:baixar": "node --use-system-ca scripts/ingestao/flora-funga.mjs baixar",
+    "taxonomia:carregar": "node scripts/ingestao/flora-funga.mjs carregar",
+    "gbif": "node --use-system-ca scripts/ingestao/gbif.mjs",
+    "banco:remoto": "node --use-system-ca scripts/banco/remoto.mjs",
+    "banco:publicar": "node --use-system-ca scripts/banco/publicar.mjs"
   },
   "engines": {
     "node": "26.x"
   },
   "dependencies": {
     "next": "16.4.6",
+    "postgres": "4.1.1",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "0.5.16",
+    "@electric-sql/pglite-postgis": "0.2.16",
     "@playwright/test": "1.65.0",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "^20",
@@ -29,6 +41,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "fflate": "0.8.3",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   }

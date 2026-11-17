@@ -1,0 +1,56 @@
+{
+  "descricao": "IBGE — Malha Municipal Digital, edição 2025 — Mato Grosso (municípios e limite estadual)",
+  "fonte": {
+    "nome": "IBGE — Malha Municipal Digital",
+    "url": "https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais.html"
+  },
+  "edicao": "2025",
+  "recorte": {
+    "uf": "MT",
+    "codigo_uf": "51"
+  },
+  "sistema_de_referencia": "SIRGAS 2000 (EPSG:4674), conforme .prj e .qmd dos arquivos",
+  "citacao": "Fonte: IBGE — Malha Municipal Digital, edição 2025.",
+  "obtido_em": "2026-11-16T17:55:52Z",
+  "condicoes_de_uso": {
+    "situacao": "verificada em 16/11/2026",
+    "licenca": "compatível com CC BY 4.0 (créditos ao IBGE)",
+    "resumo": "Licença compatível com CC BY 4.0, conforme a Nota Metodológica do IBGE \"Malha Municipal Digital e Áreas Territoriais 2025 — Notas metodológicas 01/2026: Informações técnicas e legais para a utilização dos dados publicados\" (págs. 5–8): uso, distribuição e adaptação permitidos, inclusive comercial, com créditos ao IBGE. Limites são aproximados e não constituem demarcação oficial; generalização cartográfica deve ser informada ao usuário final.",
+    "citacao_licenca": "O IBGE disponibiliza a MMD e todos produtos e informações dela derivados sob licença compatível com \"Creative Commons BY 4.0\": Esta licença permite que os usuários distribuam, remixem, adaptem e criem a partir deste produto, mesmo para fins comerciais, desde que sejam atribuídos os devidos créditos pela criação original.",
+    "condicoes": [
+      "Atribuir os créditos ao IBGE (Malha Municipal Digital, edição 2025).",
+      "Informar que os limites são aproximados e não constituem demarcação oficial da divisão político-administrativa.",
+      "Se a malha for generalizada/simplificada para exibição, deixar claro ao usuário final que ela passou por processamento que alterou suas características originais.",
+      "O IBGE não se responsabiliza por usos fora da finalidade estatística."
+    ],
+    "documento": {
+      "titulo": "Malha Municipal Digital e Áreas Territoriais 2025 — Notas metodológicas 01/2026",
+      "url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv102268.pdf",
+      "sha256": "bc88c44624c8852b4796b72b525f9092cd770415403c1a3486a8d48bcefc9e89",
+      "tamanho_bytes": 707028,
+      "obtido_em": "2026-11-16 (horário exato não registrado)"
+    },
+    "leia_me": "O Instituto Brasileiro de Geografia e Estatística (IBGE) informa aos usuários que, antes de acessar ou utilizar qualquer arquivo relacionado à Malha Municipal Digital – MMD, é imprescindível a leitura da Nota Metodológica “Informações técnicas e legais para a utilização dos dados publicados”, correspondente à versão vigente. A Nota Metodológica encontra-se disponível na seção “Publicações”, no item “Malha Municipal”, acessível por meio do portal do IBGE: <https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais.html>"
+  },
+  "arquivos": [
+    {
+      "papel": "municipios",
+      "nome": "MT_Municipios_2025.zip",
+      "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/UFs/MT/MT_Municipios_2025.zip",
+      "caminho_local": "dados/originais/ibge/malha-municipal-2025/MT_Municipios_2025.zip",
+      "tamanho_bytes": 9476597,
+      "sha256": "86f3cc662ff63c9742f095ba60fa201721f8faf1d9dc4cd3f59c20028cc9b7a0",
+      "last_modified_servidor": "Thu, 26 Feb 2026 20:02:50 GMT"
+    },
+    {
+      "papel": "uf",
+      "nome": "MT_UF_2025.zip",
+      "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/UFs/MT/MT_UF_2025.zip",
+      "caminho_local": "dados/originais/ibge/malha-municipal-2025/MT_UF_2025.zip",
+      "tamanho_bytes": 307065,
+      "sha256": "7b36f2e9661ccf45fdefb31266c7ea9039059af8c78d6fb4db44b7d2ffa2bdc1",
+      "last_modified_servidor": "Thu, 26 Feb 2026 20:02:50 GMT"
+    }
+  ],
+  "nota_publica": "Limites municipais aproximados (IBGE, Malha Municipal Digital 2025, licença compatível com CC BY 4.0); não constituem demarcação oficial. Para exibição no mapa, os limites podem ser simplificados, o que altera suas características originais."
+}
