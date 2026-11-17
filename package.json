@@ -9,7 +9,7 @@
     "lint": "eslint",
     "decoracao:gerar": "node scripts/gerar-decoracao.mjs",
     "decoracao:verificar": "node scripts/gerar-decoracao.mjs --verificar",
-    "test:banco": "node --test \"tests/banco/*.test.mjs\"",
+    "test:banco": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"tests/banco/*.test.mjs\"",
     "test:e2e": "next build && playwright test",
     "test:e2e:report": "playwright show-report",
     "test:e2e:instalar": "playwright install chromium",

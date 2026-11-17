@@ -28,6 +28,7 @@ export default defineConfig({
     // Nunca reaproveita um servidor já aberto: garante que o teste use o build atual.
     reuseExistingServer: false,
     timeout: 60_000,
-    env: { NEXT_TELEMETRY_DISABLED: "1" },
+    // Sem banco: a API pública responde 503 a consultas válidas; os testes E2E nunca alcançam o Supabase.
+    env: { NEXT_TELEMETRY_DISABLED: "1", BANCO_LEITURA_URL: "" },
   },
 });

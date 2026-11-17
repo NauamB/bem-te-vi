@@ -11,6 +11,7 @@ Migrações SQL versionadas do banco do Bem-te-vi (PostgreSQL + PostGIS), aplica
 | `20261116210000_ocorrencias_gbif.sql` | Campos das ocorrências do GBIF; grupo, base do registro, incerteza e data na camada pública |
 | `20261116220000_protecao_iucn_do_registro.sql` | Categoria IUCN CR/EN/VU do próprio registro também protege a ocorrência (só município), com ou sem conciliação taxonômica |
 | `20261117120000_suspensao_de_revisao_do_conjunto.sql` | Revisão `pendente` sem licença confirmada, para a carga suspender uma aprovação que deixou de cobrir os registros do conjunto |
+| `20261118120000_views_geograficas_da_api.sql` | Views da API pública: `ocorrencia_celula` (célula de 0,1° como inteiros, sem geometria) e `municipio_mapa` (malha simplificada em GeoJSON) |
 
 Regras:
 - **Uma migração por mudança.** Migração já aplicada não é editada: a correção vem numa migração nova.

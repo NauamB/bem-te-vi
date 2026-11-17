@@ -18,7 +18,10 @@ after(() => db?.close());
 
 describe("papel bemtevi_leitura (site)", () => {
   test("lê todas as views públicas", async () => {
-    assert.deepEqual(viewsPublicas, ["busca", "conjunto_dados", "distribuicao", "especie", "fonte", "lote", "municipio", "nome_cientifico", "nome_popular", "ocorrencia", "perfil"]);
+    assert.deepEqual(viewsPublicas, [
+      "busca", "conjunto_dados", "distribuicao", "especie", "fonte", "lote", "municipio", "municipio_mapa", "nome_cientifico", "nome_popular",
+      "ocorrencia", "ocorrencia_celula", "perfil",
+    ]);
     for (const view of viewsPublicas) {
       const { rows } = await comoPapel(db, "bemtevi_leitura", `select count(*)::int as n from publico.${view}`);
       assert.ok(rows[0].n > 0, `publico.${view} deveria ter linhas sintéticas`);
