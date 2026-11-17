@@ -2,11 +2,13 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 // Link com aparência de botão. Altura mínima de 44 px para toque.
+// primario: a ação principal da tela (laranja, o "ponto de observação" da marca) · verde: ação institucional ·
+// secundario: alternativa em fundo claro · claro: alternativa em fundo escuro ou sobre fotografia.
 const variantes = {
-  primario: "bg-floresta-800 text-white hover:bg-floresta-700",
-  secundario: "border border-floresta-800/30 text-floresta-900 hover:border-floresta-800 hover:bg-floresta-50",
-  sol: "bg-sol-300 text-grafite-900 hover:bg-sol-400",
-  claro: "border border-white/35 text-white hover:border-white hover:bg-white/10",
+  primario: "bg-laranja-500 text-verde-950 hover:bg-laranja-400 active:bg-laranja-500",
+  verde: "bg-verde-800 text-white hover:bg-verde-700 active:bg-verde-900",
+  secundario: "border border-verde-800/25 bg-white text-verde-900 hover:border-verde-800 hover:bg-verde-50",
+  claro: "border border-white/45 text-white hover:border-white hover:bg-white/10",
 } as const;
 
 type BotaoLinkProps = {

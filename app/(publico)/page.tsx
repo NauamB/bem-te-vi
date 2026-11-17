@@ -1,6 +1,8 @@
 import { BiodiversidadeIntegrada } from "@/components/presentation/biodiversidade-integrada";
 import { EstadoDoProjeto } from "@/components/presentation/estado-do-projeto";
+import { FontesDeInformacao } from "@/components/presentation/fontes-de-informacao";
 import { Hero } from "@/components/presentation/hero";
+import { Indicadores } from "@/components/presentation/indicadores";
 import { MatoGrosso } from "@/components/presentation/mato-grosso";
 import { Principios } from "@/components/presentation/principios";
 
@@ -10,8 +12,10 @@ export default function PaginaApresentacao() {
     <>
       <Hero />
       <BiodiversidadeIntegrada />
-      <Principios />
+      <Indicadores />
       <MatoGrosso />
+      <Principios />
+      <FontesDeInformacao />
       <EstadoDoProjeto />
     </>
   );

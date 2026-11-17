@@ -1,42 +1,72 @@
 @import "tailwindcss";
 
 /*
- * Identidade Bem-te-vi — tokens de cor e tipografia.
- * Verde-floresta como cor institucional; ocre do Cerrado, azul-esverdeado do Pantanal e
- * amarelo-sol como acentos de uso restrito; neutros em tons de areia e grafite.
+ * Identidade visual Bem-te-vi (Fase 11.5A) — tokens do sistema. Guia: docs/identidade/IDENTIDADE_VISUAL.md.
+ *
+ * Verde é a cor institucional (floresta, flora); azul-água representa rios e o Pantanal; laranja é o único
+ * acento de ação e de foco (o "ponto de observação" da marca); terra marca o Cerrado. Contrastes (WCAG 2.2):
+ *   branco sobre verde-600/800/950 ≥ 6,6:1 · branco sobre agua-600 4,7:1 · verde-950 sobre laranja-500 5,2:1
+ *   laranja-600 sobre branco 5,2:1 · tinta-600 sobre branco 7,3:1. Nunca texto branco sobre laranja-500 (2,8:1).
  */
 @theme {
-  --color-floresta-50: #eef5f0;
-  --color-floresta-100: #d6e7dc;
-  --color-floresta-300: #8fbd9f;
-  --color-floresta-500: #3d8058;
-  --color-floresta-600: #2f6b4a;
-  --color-floresta-700: #24573c;
-  --color-floresta-800: #1b4430;
-  --color-floresta-900: #133323;
-  --color-floresta-950: #0b2117;
+  --color-verde-50: #eaf4ee;
+  --color-verde-100: #d4e8db;
+  --color-verde-200: #a9d1b7;
+  --color-verde-300: #7db892;
+  --color-verde-400: #4f9c6c;
+  --color-verde-500: #2e8350;
+  --color-verde-600: #1b6b3a;
+  --color-verde-700: #145a30;
+  --color-verde-800: #0f4c28;
+  --color-verde-900: #0b3d20;
+  --color-verde-950: #082f1a;
 
-  --color-cerrado-400: #c9894a;
-  --color-cerrado-600: #9a5f2a;
-  --color-pantanal-400: #5aa3a6;
-  --color-pantanal-600: #2f6f73;
-  --color-sol-300: #f0cf6e;
-  --color-sol-400: #e6b83d;
+  --color-laranja-50: #fff4ec;
+  --color-laranja-100: #ffe4cf;
+  --color-laranja-300: #fdba74;
+  --color-laranja-400: #fb8a3c;
+  --color-laranja-500: #f97316;
+  --color-laranja-600: #c2410c;
 
-  --color-areia-50: #fbf9f4;
-  --color-areia-100: #f4efe4;
-  --color-areia-200: #e8e0cf;
-  --color-pedra-500: #6b7068;
-  --color-pedra-700: #3f443e;
-  --color-grafite-900: #1c201d;
+  --color-agua-50: #e8f4f8;
+  --color-agua-100: #cfe7ef;
+  --color-agua-400: #4fa3c0;
+  --color-agua-600: #247c9b;
+  --color-agua-800: #164f64;
 
+  --color-terra-400: #c98a4b;
+  --color-terra-600: #9a5f2a;
+
+  --color-papel-0: #ffffff;
+  --color-papel-50: #f6f9f6;
+  --color-papel-100: #edf3ee;
+  --color-linha: #dce6df;
+  --color-tinta-300: #a7b4ab;
+  --color-tinta-500: #5f6f65;
+  --color-tinta-600: #46564c;
+  --color-tinta-800: #24342a;
+  --color-tinta-950: #0d1a13;
+
+  /* Manrope: títulos e marca · Inter: texto · IBM Plex Mono: rótulos, dados e créditos. */
+  --font-display: var(--font-titulo), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-texto), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-titulo), ui-serif, Georgia, serif;
   --font-mono: var(--font-dados), ui-monospace, monospace;
+
+  --radius-cartao: 1.25rem;
+  --radius-painel: 1.75rem;
+
+  --shadow-cartao: 0 1px 2px rgb(8 47 26 / 0.06), 0 12px 32px -16px rgb(8 47 26 / 0.22);
+  --shadow-elevado: 0 2px 4px rgb(8 47 26 / 0.08), 0 24px 48px -20px rgb(8 47 26 / 0.35);
 }
 
 :root {
   color-scheme: light;
+  /* Cor do contorno de foco: laranja escuro em superfícies claras; claro em superfícies escuras (.superficie-escura). */
+  --cor-foco: var(--color-laranja-600);
+}
+
+.superficie-escura {
+  --cor-foco: var(--color-laranja-300);
 }
 
 html {
@@ -45,10 +75,11 @@ html {
 }
 
 body {
-  background-color: var(--color-areia-50);
-  color: var(--color-grafite-900);
+  background-color: var(--color-papel-0);
+  color: var(--color-tinta-950);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
+  font-feature-settings: "cv11", "ss01";
 }
 
 /* Âncoras não ficam escondidas sob o cabeçalho fixo. */
@@ -57,9 +88,9 @@ body {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-sol-400);
+  outline: 3px solid var(--cor-foco);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 /* Contêineres que recebem foco programático (destino do menu ou do link "Ir para o conteúdo") não exibem

@@ -1,0 +1,152 @@
+{
+  "descricao": "Fotografias ilustrativas de paisagem usadas na interface do Bem-te-vi. Não são registros científicos. Metadados obtidos da API do Wikimedia Commons (imageinfo/extmetadata).",
+  "verificado_em": "2026-11-17",
+  "imagens": [
+    {
+      "slug": "chapada-dos-guimaraes",
+      "obra": "PARNA da Chapada dos Guimarães - Rdzanini(001)",
+      "pagina": "https://commons.wikimedia.org/wiki/File:PARNA_da_Chapada_dos_Guimar%C3%A3es_-_Rdzanini(001).jpg",
+      "autor": "User:RodrigoDZ",
+      "credito_declarado": "Own work",
+      "licenca": "CC BY-SA 4.0",
+      "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+      "atribuicao_exigida": true,
+      "descricao_original": "Fotografia de paisagem em Parque Nacional da Chapada dos Guimarães.",
+      "data_foto": "2017-10-09 10:11:38",
+      "coordenadas": [
+        -15.403981,
+        -55.828168
+      ],
+      "enviado_por": "Rdzanini",
+      "enviado_em": "2018-05-31T01:51:50Z",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/PARNA_da_Chapada_dos_Guimar%C3%A3es_-_Rdzanini%28001%29.jpg",
+        "largura": 4608,
+        "altura": 3456,
+        "sha1_commons": "10c6eb09e3f8b9ea04b7819d4911968f75970278"
+      },
+      "renderizacao_baixada": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/PARNA_da_Chapada_dos_Guimar%C3%A3es_-_Rdzanini%28001%29.jpg/3840px-PARNA_da_Chapada_dos_Guimar%C3%A3es_-_Rdzanini%28001%29.jpg",
+        "bytes": 2818752,
+        "sha256": "755c67d01cf38c2ee74ad366837ba272437df13f2dc05ebb491491560840ec10",
+        "caminho_local": "dados/originais/imagens/chapada-dos-guimaraes.jpg"
+      },
+      "versao_publicada": {
+        "caminho": "public/imagens/paisagens/chapada-dos-guimaraes.webp",
+        "largura": 2400,
+        "altura": 1800,
+        "bytes": 554208,
+        "sha256": "cdb6618d34850c4eaad976321f692db6c32ab3c842926b626d47782ea1c1cc2d",
+        "alteracoes": "Redimensionada e convertida de JPEG para WebP (qualidade 74) com sharp; exibida recortada (object-fit: cover) no enquadramento de cada página. Licença mantida: CC BY-SA 4.0."
+      }
+    },
+    {
+      "slug": "cristalino-amazonia",
+      "obra": "Parque Estadual do Cristalino",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parque_Estadual_do_Cristalino.jpg",
+      "autor": "Aline Gama Baptista",
+      "credito_declarado": "Own work",
+      "licenca": "CC BY-SA 4.0",
+      "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+      "atribuicao_exigida": true,
+      "descricao_original": "Reflexo da floresta Amazônica nas calmas águas do Rio Teles Pires.",
+      "data_foto": "2014-08-07 08:14:17",
+      "coordenadas": null,
+      "enviado_por": "Alinegama77",
+      "enviado_em": "2019-05-13T11:42:55Z",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Parque_Estadual_do_Cristalino.jpg",
+        "largura": 4256,
+        "altura": 2832,
+        "sha1_commons": "3cae2744e2d093d2fb296f98c5093cbcfbc929e4"
+      },
+      "renderizacao_baixada": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Parque_Estadual_do_Cristalino.jpg/3840px-Parque_Estadual_do_Cristalino.jpg",
+        "bytes": 2834136,
+        "sha256": "ed6fb289d56c34a3617d43ccf36eb36338bb15100a5c371c3659bdc52ae8281d",
+        "caminho_local": "dados/originais/imagens/cristalino-amazonia.jpg"
+      },
+      "versao_publicada": {
+        "caminho": "public/imagens/paisagens/cristalino-amazonia.webp",
+        "largura": 1600,
+        "altura": 1065,
+        "bytes": 255680,
+        "sha256": "9ebc4fe9cd2566af6a3476edfa9486dfbaaf42776f3fcd91fbca53fdb4285340",
+        "alteracoes": "Redimensionada e convertida de JPEG para WebP (qualidade 74) com sharp; exibida recortada (object-fit: cover) no enquadramento de cada página. Licença mantida: CC BY-SA 4.0."
+      }
+    },
+    {
+      "slug": "serra-ricardo-franco-cerrado",
+      "obra": "PE Serra Ricardo Franco - Jean Explorador Aventureiro(001)",
+      "pagina": "https://commons.wikimedia.org/wiki/File:PE_Serra_Ricardo_Franco_-_Jean_Explorador_Aventureiro(001).jpg",
+      "autor": "Jean Taques Explorador Aventureiro",
+      "credito_declarado": "Own work",
+      "licenca": "CC BY-SA 4.0",
+      "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+      "atribuicao_exigida": true,
+      "descricao_original": "Fotografia de paisagem em Parque Estadual Serra Ricardo Franco.",
+      "data_foto": "2018-03-25 12:43:46",
+      "coordenadas": null,
+      "enviado_por": "Jean Explorador Aventureiro",
+      "enviado_em": "2018-05-21T12:57:47Z",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/PE_Serra_Ricardo_Franco_-_Jean_Explorador_Aventureiro%28001%29.jpg",
+        "largura": 5184,
+        "altura": 3456,
+        "sha1_commons": "5f2923f51c67b60158a8c5d84004f1fd94d4c4b4"
+      },
+      "renderizacao_baixada": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/PE_Serra_Ricardo_Franco_-_Jean_Explorador_Aventureiro%28001%29.jpg/3840px-PE_Serra_Ricardo_Franco_-_Jean_Explorador_Aventureiro%28001%29.jpg",
+        "bytes": 3188172,
+        "sha256": "05ebe1bdc8b7f0136bdf07e7f4f4b4d4911778373f3b7c60fff0c49f98e69525",
+        "caminho_local": "dados/originais/imagens/serra-ricardo-franco-cerrado.jpg"
+      },
+      "versao_publicada": {
+        "caminho": "public/imagens/paisagens/serra-ricardo-franco-cerrado.webp",
+        "largura": 1600,
+        "altura": 1067,
+        "bytes": 378794,
+        "sha256": "9836e59a9ac9a237cd43812b6005a93c331610f5a0c63bb9e67c0f1d50be36b9",
+        "alteracoes": "Redimensionada e convertida de JPEG para WebP (qualidade 74) com sharp; exibida recortada (object-fit: cover) no enquadramento de cada página. Licença mantida: CC BY-SA 4.0."
+      }
+    },
+    {
+      "slug": "pantanal-rppn-sesc",
+      "obra": "Cambara (Vochysia divergens Pohl) tree with Tuiuiu (Jabiru mycteria) nest in RPPN Sesc Pantanal",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cambara_(Vochysia_divergens_Pohl)_tree_with_Tuiuiu_(Jabiru_mycteria)_nest_in_RPPN_Sesc_Pantanal.jpg",
+      "autor": "Gabyschuck",
+      "credito_declarado": "Own work",
+      "licenca": "CC BY-SA 4.0",
+      "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+      "atribuicao_exigida": true,
+      "descricao_original": "Nascer do sol na Reserva Particular do Patrimônio Natural Estância Ecológica Sesc - Pantanal de nível Federal, localizado (a) em Barão de Melgaço (MT)",
+      "data_foto": "2020-11-28 05:43:26",
+      "coordenadas": [
+        -16.586988,
+        -56.406316
+      ],
+      "enviado_por": "Gabyschuck",
+      "enviado_em": "2021-06-04T16:49:31Z",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Cambara_%28Vochysia_divergens_Pohl%29_tree_with_Tuiuiu_%28Jabiru_mycteria%29_nest_in_RPPN_Sesc_Pantanal.jpg",
+        "largura": 3000,
+        "altura": 2019,
+        "sha1_commons": "321b4509471f63c11edfc6af82d26a69b53a4dee"
+      },
+      "renderizacao_baixada": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Cambara_%28Vochysia_divergens_Pohl%29_tree_with_Tuiuiu_%28Jabiru_mycteria%29_nest_in_RPPN_Sesc_Pantanal.jpg",
+        "bytes": 4617552,
+        "sha256": "e437538a75937409d66d9e2b4b862a42178b96305e3bd3e462bcbeaa215c73d8",
+        "caminho_local": "dados/originais/imagens/pantanal-rppn-sesc.jpg"
+      },
+      "versao_publicada": {
+        "caminho": "public/imagens/paisagens/pantanal-rppn-sesc.webp",
+        "largura": 1600,
+        "altura": 1077,
+        "bytes": 150910,
+        "sha256": "dd4789291e4d4f0d13d2ce50ac01613dec357f2dedd8d00dafcfe04a9d465973",
+        "alteracoes": "Redimensionada e convertida de JPEG para WebP (qualidade 74) com sharp; exibida recortada (object-fit: cover) no enquadramento de cada página. Licença mantida: CC BY-SA 4.0."
+      }
+    }
+  ]
+}

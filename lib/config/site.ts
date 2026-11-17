@@ -9,7 +9,7 @@ export const site = {
   // Domínio oficial de produção (Vercel). Usado em metadados absolutos, robots.txt e sitemap.xml.
   url: "https://bem-te-vi-zeta.vercel.app",
   versao: "0.1.0",
-  fase: "Fundação (Fase 10C)",
+  fase: "Projeto piloto em desenvolvimento — Mato Grosso",
   aviso:
     "Projeto independente em desenvolvimento. Não é serviço oficial de órgão público ou instituição, e ainda não publica dados de biodiversidade.",
 } as const;

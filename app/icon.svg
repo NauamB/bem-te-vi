@@ -1,14 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Marca do Bem-te-vi">
-  <title>Bem-te-vi — marca</title>
-  <defs><clipPath id="lente"><circle cx="24" cy="24" r="21"/></clipPath></defs>
-  <g clip-path="url(#lente)">
-    <path d="M0 0H48V15C36 22 26 11 13 17C8 19.5 4 20 0 19Z" fill="#2f6b4a"/>
-    <path d="M0 19C4 20 8 19.5 13 17C26 11 36 22 48 15V29C38 35 27 26 16 31C10 33.5 5 33 0 32Z" fill="#c9894a"/>
-    <path d="M0 32C5 33 10 33.5 16 31C27 26 38 35 48 29V48H0Z" fill="#2f6f73"/>
-    <path d="M0 25.5C6 26.5 11 25 17 23C27 19.5 36 27 48 22" fill="none" stroke="#fbf9f4" stroke-opacity=".55" stroke-width="1"/>
-    <path d="M0 39C8 39.5 14 38 21 36.5C30 34.5 38 40 48 36" fill="none" stroke="#fbf9f4" stroke-opacity=".45" stroke-width="1"/>
-    <path d="M0 10.5C9 12 16 8 25 8.5C33 9 40 12 48 8" fill="none" stroke="#fbf9f4" stroke-opacity=".4" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bem-te-vi">
+  <title>Bem-te-vi</title>
+  <rect width="64" height="64" rx="14" fill="#082f1a"/>
+  <g transform="translate(0.98 1.92) scale(0.94)"><defs><clipPath id="f"><path d="M5 39C15 26 39 21.5 59 30.5C50 46.5 25 52.5 5 39Z"/></clipPath></defs>
+  <path d="M7.5 27C19 16.5 41 12 60.5 19C43 16.5 24.5 19.5 11 29.5Z" fill="#eaf4ee"/>
+  <g clip-path="url(#f)">
+    <rect width="64" height="64" fill="#3e9b5e"/>
+    <path d="M0 41.5C10 38.5 19 43 30 40S50 32.5 64 34.5V64H0Z" fill="#3a9cc0"/>
+    <path d="M0 47.5C11 44.5 20 49 31 46S52 39 64 41" fill="none" stroke="#eaf4ee" stroke-opacity=".4" stroke-width="1.1"/>
+    <path d="M0 34C12 31 22 34 32 31S52 25 64 27" fill="none" stroke="#eaf4ee" stroke-opacity=".3" stroke-width="1.1"/>
   </g>
-  <circle cx="24" cy="24" r="21" fill="none" stroke="#0b2117" stroke-width="2"/>
-  <circle cx="31.5" cy="19.5" r="3" fill="#e6b83d" stroke="#0b2117" stroke-width="1.25"/>
+  <path d="M5 39C15 26 39 21.5 59 30.5C50 46.5 25 52.5 5 39Z" fill="none" stroke="#eaf4ee" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="31" cy="37.5" r="9.6" fill="#eaf4ee" stroke="#eaf4ee" stroke-width="2.2"/>
+  <circle cx="31" cy="37.5" r="6.4" fill="none" stroke="#0f4c28" stroke-width="1" stroke-opacity=".5"/>
+  <circle cx="31" cy="37.5" r="3.9" fill="#f97316"/></g>
 </svg>

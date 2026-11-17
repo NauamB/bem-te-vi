@@ -60,7 +60,7 @@ export function MenuMovel({ itens }: { itens: ItemNavegacao[] }) {
         aria-expanded={aberto}
         aria-controls={id}
         onClick={() => setAberto((v) => !v)}
-        className="inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-full border border-floresta-800/25 px-4 text-sm font-semibold text-floresta-900"
+        className="inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-full border border-verde-800/25 px-4 text-sm font-semibold text-verde-900 hover:bg-verde-50"
       >
         <span aria-hidden="true" className="flex w-4 flex-col gap-1">
           <span className={`h-0.5 bg-current transition-transform ${aberto ? "translate-y-1.5 rotate-45" : ""}`} />
@@ -72,13 +72,13 @@ export function MenuMovel({ itens }: { itens: ItemNavegacao[] }) {
       <div
         id={id}
         hidden={!aberto}
-        className="absolute inset-x-0 top-full border-b border-floresta-900/10 bg-areia-50 px-4 pb-6 pt-2 shadow-lg sm:px-6"
+        className="absolute inset-x-0 top-full border-b border-linha bg-white px-4 pb-6 pt-2 shadow-elevado sm:px-6"
       >
         <nav aria-label="Navegação principal">
-          <ul className="divide-y divide-floresta-900/10">
+          <ul className="divide-y divide-linha">
             {itens.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} onClick={() => escolher(item.href)} className="flex min-h-12 items-center text-base font-medium text-grafite-900">
+                <Link href={item.href} onClick={() => escolher(item.href)} className="flex min-h-12 items-center text-base font-medium text-tinta-950 hover:text-verde-700">
                   {item.rotulo}
                 </Link>
               </li>
@@ -86,10 +86,10 @@ export function MenuMovel({ itens }: { itens: ItemNavegacao[] }) {
           </ul>
         </nav>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          <Link href={rotas.explorar} onClick={() => escolher(rotas.explorar)} className="inline-flex min-h-11 items-center justify-center rounded-full bg-floresta-800 px-5 text-sm font-semibold text-white">
+          <Link href={rotas.explorar} onClick={() => escolher(rotas.explorar)} className="inline-flex min-h-11 items-center justify-center rounded-full bg-laranja-500 px-5 text-sm font-semibold text-verde-950 hover:bg-laranja-400">
             Explorar biodiversidade
           </Link>
-          <Link href={rotas.acessoInterno} onClick={() => escolher(rotas.acessoInterno)} className="inline-flex min-h-11 items-center justify-center rounded-full border border-floresta-800/30 px-5 text-sm font-semibold text-floresta-900">
+          <Link href={rotas.acessoInterno} onClick={() => escolher(rotas.acessoInterno)} className="inline-flex min-h-11 items-center justify-center rounded-full border border-verde-800/25 px-5 text-sm font-semibold text-verde-900 hover:bg-verde-50">
             Acesso interno
           </Link>
         </div>

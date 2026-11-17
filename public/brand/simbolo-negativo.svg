@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 9 60 46" role="img" aria-label="Bem-te-vi — símbolo">
+  <title>Bem-te-vi — símbolo</title>
+  <defs><clipPath id="f"><path d="M5 39C15 26 39 21.5 59 30.5C50 46.5 25 52.5 5 39Z"/></clipPath></defs>
+  <path d="M7.5 27C19 16.5 41 12 60.5 19C43 16.5 24.5 19.5 11 29.5Z" fill="#eaf4ee"/>
+  <g clip-path="url(#f)">
+    <rect width="64" height="64" fill="#3e9b5e"/>
+    <path d="M0 41.5C10 38.5 19 43 30 40S50 32.5 64 34.5V64H0Z" fill="#3a9cc0"/>
+    <path d="M0 47.5C11 44.5 20 49 31 46S52 39 64 41" fill="none" stroke="#eaf4ee" stroke-opacity=".4" stroke-width="1.1"/>
+    <path d="M0 34C12 31 22 34 32 31S52 25 64 27" fill="none" stroke="#eaf4ee" stroke-opacity=".3" stroke-width="1.1"/>
+  </g>
+  <path d="M5 39C15 26 39 21.5 59 30.5C50 46.5 25 52.5 5 39Z" fill="none" stroke="#eaf4ee" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="31" cy="37.5" r="9.6" fill="#eaf4ee" stroke="#eaf4ee" stroke-width="2.2"/>
+  <circle cx="31" cy="37.5" r="6.4" fill="none" stroke="#0f4c28" stroke-width="1" stroke-opacity=".5"/>
+  <circle cx="31" cy="37.5" r="3.9" fill="#f97316"/>
+</svg>

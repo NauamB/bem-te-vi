@@ -12,9 +12,26 @@ test.describe("SEO e metadados", () => {
     await expect(page.locator("meta[property='og:site_name']")).toHaveAttribute("content", "Bem-te-vi");
     await expect(page.locator("meta[property='og:locale']")).toHaveAttribute("content", "pt_BR");
     await expect(page.locator("meta[property='og:type']")).toHaveAttribute("content", "website");
-    await expect(page.locator("meta[name='theme-color']")).toHaveAttribute("content", "#1b4430");
+    await expect(page.locator("meta[name='theme-color']")).toHaveAttribute("content", "#082f1a");
     await expect(page.locator("link[rel~='icon']")).toHaveAttribute("href", /^\/icon\.svg/);
     await expect(page.locator("meta[name='robots']")).toHaveCount(0);
+  });
+
+  test("imagem de compartilhamento: Open Graph e Twitter Card com PNG 1200×630 do próprio site", async ({ page, request }) => {
+    await page.goto("/");
+    await expect(page.locator("meta[name='twitter:card']")).toHaveAttribute("content", "summary_large_image");
+    await expect(page.locator("meta[name='twitter:title']")).toHaveAttribute("content", site.titulo);
+    for (const [meta, caminho] of [["meta[property='og:image']", "/opengraph-image"], ["meta[name='twitter:image']", "/twitter-image"]] as const) {
+      const url = await page.locator(meta).first().getAttribute("content");
+      expect(url, meta).toContain(`${site.url}${caminho}`);
+      const endereco = new URL(url ?? "");
+      const resposta = await request.get(endereco.pathname + endereco.search);
+      expect(resposta.status(), caminho).toBe(200);
+      expect(resposta.headers()["content-type"], caminho).toBe("image/png");
+    }
+    await expect(page.locator("meta[property='og:image:width']")).toHaveAttribute("content", "1200");
+    await expect(page.locator("meta[property='og:image:height']")).toHaveAttribute("content", "630");
+    await expect(page.locator("meta[property='og:image:alt']")).toHaveAttribute("content", /Bem-te-vi/);
   });
 
   test("Explorar: título e descrição próprios, indexável", async ({ page }) => {

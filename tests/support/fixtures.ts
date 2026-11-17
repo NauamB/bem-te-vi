@@ -50,6 +50,8 @@ export { expect };
 //   0.1.0  versão do produto
 //   10     rótulo de fase ("Fase 10C")
 //   404    código da página não encontrada
-export const NUMEROS_PERMITIDOS = new Set(["01", "02", "03", "04", "05", "142", "0.1.0", "10", "404"]);
+// "4.0": versão da licença CC BY-SA 4.0 nos créditos das fotografias; "0": nome da licença CC0 na seção de fontes;
+// "001": parte do título de duas obras no Wikimedia Commons, citado nos créditos.
+export const NUMEROS_PERMITIDOS = new Set(["01", "02", "03", "04", "05", "142", "0.1.0", "10", "404", "4.0", "0", "001"]);
 
 export const extrairNumeros = (texto: string) => [...new Set(texto.match(/\d+(?:[.,]\d+)*/g) ?? [])];

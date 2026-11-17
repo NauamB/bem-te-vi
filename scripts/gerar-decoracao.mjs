@@ -15,16 +15,16 @@ import { fileURLToPath } from "node:url";
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), "..");
 const DESTINO = join(RAIZ, "public", "decoracao");
 
-// Mesmos parâmetros e cores da versão inline aprovada na Fase 10C (cor = token do tema, opacidade = alfa usado antes).
+// Parâmetros da Fase 10C; cores atualizadas para a identidade da Fase 11.5A (verde-800 e verde-200 do tema).
 const COMPOSICOES = [
   {
     arquivo: "curvas-hero.svg",
-    largura: 1400, altura: 800, cor: "#1b4430", opacidade: 0.07, casas: 0,
+    largura: 1400, altura: 800, cor: "#0f4c28", opacidade: 0.07, casas: 0,
     centros: [{ x: 1180, y: 330, raioInicial: 40, passo: 34, niveis: 16, fase: 0.6 }],
   },
   {
     arquivo: "curvas-painel.svg",
-    largura: 500, altura: 400, cor: "#8fbd9f", opacidade: 0.35, casas: 1,
+    largura: 500, altura: 400, cor: "#a9d1b7", opacidade: 0.35, casas: 1,
     centros: [
       { x: 150, y: 120, raioInicial: 10, passo: 15, niveis: 9, fase: 0.2 },
       { x: 380, y: 300, raioInicial: 14, passo: 17, niveis: 8, fase: 1.9 },
@@ -32,7 +32,7 @@ const COMPOSICOES = [
   },
   {
     arquivo: "curvas-mato-grosso.svg",
-    largura: 1400, altura: 700, cor: "#8fbd9f", opacidade: 0.12, casas: 0,
+    largura: 1400, altura: 700, cor: "#a9d1b7", opacidade: 0.14, casas: 0,
     centros: [
       { x: 200, y: 560, raioInicial: 30, passo: 30, niveis: 14, fase: 2.4 },
       { x: 1250, y: 120, raioInicial: 20, passo: 28, niveis: 10, fase: 0.9 },
